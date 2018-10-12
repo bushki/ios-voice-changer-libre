@@ -73,7 +73,23 @@
                     <view key="view" contentMode="scaleToFill" id="Gme-V8-Ta9" customClass="PlaySounds">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.27295972839999999" green="1" blue="0.98783739130000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="UKN-sm-zbG">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="8pg-cs-oT7">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="UKN-sm-zbG" firstAttribute="top" secondItem="ARG-yV-9X6" secondAttribute="top" id="4WZ-P3-492"/>
+                            <constraint firstItem="UKN-sm-zbG" firstAttribute="leading" secondItem="ARG-yV-9X6" secondAttribute="leading" id="7Q4-UT-cz5"/>
+                            <constraint firstItem="ARG-yV-9X6" firstAttribute="trailing" secondItem="UKN-sm-zbG" secondAttribute="trailing" id="E2f-05-5M4"/>
+                            <constraint firstItem="ARG-yV-9X6" firstAttribute="bottom" secondItem="UKN-sm-zbG" secondAttribute="bottom" id="oy1-xZ-fqr"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ARG-yV-9X6"/>
                     </view>
                 </viewController>
