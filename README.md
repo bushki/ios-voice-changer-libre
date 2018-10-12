@@ -1,4 +1,7 @@
-# Pitch Perfect ios app 
+# Pitch Perfect
+
+iOS app written in swift.
+Records audio, plays back recorded audio using various pitches.
 
 ## Demo
 
