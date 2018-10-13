@@ -24,6 +24,8 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        stopRecordingButton.isEnabled = false;
     }
     
     @IBAction func recordAudio(_ sender: Any) {
@@ -37,7 +39,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         let pathArray = [dirPath, recordingName]
         //create file path
         let filePath = URL(string: pathArray.joined(separator: "/"))
-        print(filePath)
+        
         
         //start and config AV session
         let session = AVAudioSession.sharedInstance()
