@@ -66,7 +66,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     //this func is part of the AVAudioRecorderDelegate protocol (interface)
     //will get called when audio has finished recording
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
-        //print("finished recording")
         if(flag)
         {
             //performe segue and send file URL using the audioRecorder variable
