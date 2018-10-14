@@ -39,6 +39,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		79D9AB9121731952007663D6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				79DC53DD202B78FD00EE2AE7 /* RecordSoundsViewController.swift */,
+				7925BF1C202D2F6100DFD95C /* PlaySoundsViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		79D9AB9221731978007663D6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				79DAAE9D21707EFC00DBBD88 /* PlaySoundsViewController-Audio.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		79DC53CF202B78FD00EE2AE7 = {
 			isa = PBXGroup;
 			children = (
@@ -58,14 +75,13 @@
 		79DC53DA202B78FD00EE2AE7 /* VoiceChangerLibre */ = {
 			isa = PBXGroup;
 			children = (
+				79D9AB9221731978007663D6 /* Extensions */,
+				79D9AB9121731952007663D6 /* ViewControllers */,
 				79DC53DB202B78FD00EE2AE7 /* AppDelegate.swift */,
-				79DC53DD202B78FD00EE2AE7 /* RecordSoundsViewController.swift */,
 				79DC53DF202B78FD00EE2AE7 /* Main.storyboard */,
 				79DC53E2202B78FD00EE2AE7 /* Assets.xcassets */,
 				79DC53E4202B78FD00EE2AE7 /* LaunchScreen.storyboard */,
 				79DC53E7202B78FD00EE2AE7 /* Info.plist */,
-				7925BF1C202D2F6100DFD95C /* PlaySoundsViewController.swift */,
-				79DAAE9D21707EFC00DBBD88 /* PlaySoundsViewController-Audio.swift */,
 			);
 			path = VoiceChangerLibre;
 			sourceTree = "<group>";

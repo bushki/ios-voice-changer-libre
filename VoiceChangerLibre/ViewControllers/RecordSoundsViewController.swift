@@ -1,6 +1,6 @@
 //
 //  RecordSoundsViewController.swift
-//  PitchPerfect
+//  Voice Changer Libre
 //
 //  Created by Luis on 2/7/18.
 //
@@ -19,12 +19,10 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         stopRecordingButton.isEnabled = false;
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         stopRecordingButton.isEnabled = false;
     }
     
@@ -39,7 +37,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         let pathArray = [dirPath, recordingName]
         //create file path
         let filePath = URL(string: pathArray.joined(separator: "/"))
-        
         
         //start and config AV session
         let session = AVAudioSession.sharedInstance()
@@ -68,7 +65,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
         if(flag)
         {
-            //performe segue and send file URL using the audioRecorder variable
+            //perform segue and send file URL using the audioRecorder variable
             performSegue(withIdentifier: "stopRecordingSegue", sender: audioRecorder.url)
         }
         else
@@ -87,7 +84,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
             playSoundsVC.recordedAudioURL = recorderAudioURL; //set the varible in the target VC to have the file URL
         }
     }
-    
     
 }
 
