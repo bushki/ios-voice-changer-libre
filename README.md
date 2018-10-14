@@ -5,6 +5,7 @@ Records audio, plays back recorded audio using various pitches.
 
 ![Pitch Perfect Demo](pitch-perfect-demo.gif?raw=true "Demo")
 
+
 ### License
 
 As used herein, "Educational Content" means a sub-set of the Content containing the educational materials made available to you through the Online Courses, including such on-line lectures, speeches, video lessons, quizzes, presentation materials, homework assignments, programming assignments, code samples, and other educational materials and tools. Such Educational Content will be considered the "Licensed Material" under the terms of the CC License (as defined below).
@@ -19,5 +20,7 @@ Without limiting the generality of the terms of the CC License, the following ar
 (d) the sale of advertisements, sponsorships, or promotions placed (on the Educational Content, or any part thereof, or the sale of (advertisements, sponsorships, or promotions on any website or blog (containing any part of the Educational Material, including without (limitation any "pop-up advertisements";
 (e) the use of Educational Content by a college, university, school, or other educational institution for instruction where tuition is charged; and
 (f) the use of Educational Content by a for-profit corporation or non-profit entity for internal professional development or training.
+
+https://www.udacity.com/course/intro-to-ios-app-development-with-swift--ud585
 
 
