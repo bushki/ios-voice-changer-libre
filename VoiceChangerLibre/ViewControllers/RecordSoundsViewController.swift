@@ -38,7 +38,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     
     let formatter: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.dateFormat = "mm:ss:SS"
+        formatter.dateFormat = "mm:ss"
         return formatter
     }()
     
