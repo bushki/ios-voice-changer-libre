@@ -24,9 +24,8 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+
         resetUI()
-        
     }
     
     func resetUI()
@@ -50,7 +49,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     @IBAction func recordAudio(_ sender: Any) {
         
         timer.invalidate() // just in case button is tapped multiple times
-        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.updateElapsedTimeLabel), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(self.updateElapsedTimeLabel), userInfo: nil, repeats: true)
         stopWatch.start()
         
         //recordingLabel.text = "Recording in Progress"
