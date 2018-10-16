@@ -13,6 +13,15 @@ Records audio, plays back recorded audio using various sound effects.
 5. Privacy - All recordings stay on your phone, never uploaded to a server.
 6. Open source.
 
+## How to build
+
+Requires Mac running OSX 10.13.3 or higher . 
+
+1. Install Xcode (version 9.4 or higher). https://developer.apple.com/xcode/
+2. Install Git https://git-scm.com/download/mac
+3. Clone repo
+4. Open .xcodeproj file . 
+
 ### License
 
 See license file
