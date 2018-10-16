@@ -11,6 +11,8 @@ import AVFoundation
 class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     
     var audioRecorder: AVAudioRecorder!
+    var timer = Timer()
+    var stopWatch = Stopwatch()
 
     @IBOutlet weak var recordingLabel: UILabel!
     @IBOutlet weak var recordButton: UIButton!
@@ -18,16 +20,40 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        stopRecordingButton.isEnabled = false;
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        resetUI()
+        
+    }
+    
+    func resetUI()
+    {
         stopRecordingButton.isEnabled = false;
+        timer.invalidate()
+        stopWatch.stop()
+    }
+    
+    let formatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "mm:ss:SS"
+        return formatter
+    }()
+    
+    // must be internal or public.
+    @objc func updateElapsedTimeLabel() {
+        recordingLabel.text = formatter.string(from: Date(timeIntervalSince1970: stopWatch.elapsedTime))
     }
     
     @IBAction func recordAudio(_ sender: Any) {
-        recordingLabel.text = "Recording in Progress"
+        
+        timer.invalidate() // just in case button is tapped multiple times
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.updateElapsedTimeLabel), userInfo: nil, repeats: true)
+        stopWatch.start()
+        
+        //recordingLabel.text = "Recording in Progress"
         stopRecordingButton.isEnabled = true
         recordButton.isEnabled = false
         
@@ -51,6 +77,9 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     }
     
     @IBAction func stopRecording(_ sender: Any) {
+        timer.invalidate()
+        stopWatch.stop()
+        
         stopRecordingButton.isEnabled = false
         recordButton.isEnabled = true
         recordingLabel.text = "Tap to Record"
@@ -74,7 +103,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         }
     }
     
-    //gets called right befor the segue happens
+    //gets called right before the segue happens
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //check to make sure the segue ID is correct
         if segue.identifier == "stopRecordingSegue"
